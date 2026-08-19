@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .welcome-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      width: 100%;
+      max-width: 480px;
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1.75rem 2rem;
+      position: relative;
+    }
+
+    .card-header .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      border: 2px solid rgba(255,255,255,0.35);
+    }
+
+    .card-header h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .card-header p {
+      font-size: 0.875rem;
+      opacity: 0.85;
+      margin-top: 0.25rem;
+    }
+
+    .card-body {
+      padding: 1.5rem 2rem 2rem;
+    }
+
+    .welcome-text {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .feature-item .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .btn:active { transform: scale(0.98); }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: var(--primary-hover); }
+
+    .btn-secondary {
+      background: var(--border);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover { background: #cbd5e1; }
+
+    .footer {
+      text-align: center;
+      padding: 0.6rem 2rem 1rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-card">
+    <div class="card-header">
+      <div class="avatar">👋</div>
+      <h1>Welcome aboard</h1>
+      <p>We're glad to have you here</p>
+    </div>
+    <div class="card-body">
+      <p class="welcome-text">
+        Here's a quick tour to help you get started. Everything you need is right at your fingertips.
+      </p>
+      <div class="features">
+        <div class="feature-item"><span class="dot"></span> Dashboard — see your overview at a glance</div>
+        <div class="feature-item"><span class="dot"></span> Projects — manage your work in one place</div>
+        <div class="feature-item"><span class="dot"></span> Settings — personalize your experience</div>
+      </div>
+      <div class="card-actions">
+        <button class="btn btn-primary" onclick="alert('Let\'s go! 🚀')">Get started</button>
+        <button class="btn btn-secondary" onclick="alert('Take your time!')">Learn more</button>
+      </div>
+    </div>
+    <div class="footer">
+      © 2026 — Simple Welcome UI
+    </div>
+  </div>
+</body>
+</html>
